@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HomeWork2ZhuravlevD {
     public static void main(String[] args) {
         System.out.println("1.Задание.");
@@ -16,8 +18,7 @@ public class HomeWork2ZhuravlevD {
     //1.Написать метод, принимающий на вход два целых числа и проверяющий, что их сумма лежит в пределах от 10 до 20
     // (включительно), если да – вернуть true, в противном случае – false
     public static boolean SumWithin10and20(int x1, int x2) {
-        boolean SumWithin10and20 = ((x1 + x2) >= 10 && (x1 + x2) <= 20);
-        return SumWithin10and20;
+        return ((x1 + x2) >= 10 && (x1 + x2) <= 20);
     }
 
     //2.Написать метод, которому в качестве параметра передается целое число,
@@ -34,10 +35,7 @@ public class HomeWork2ZhuravlevD {
     //3.Написать метод, которому в качестве параметра передается целое число.
     //Метод должен вернуть true, если число отрицательное, и вернуть false если положительное.
     public static boolean MyBoolean(int x) {
-        if (x >= 0) {
-            return true;
-        }
-        return false;
+            return (x >= 0);
     }
 
     //4.Написать метод, которому в качестве аргументов передается строка и число,
@@ -52,14 +50,9 @@ public class HomeWork2ZhuravlevD {
     //и возвращает boolean (високосный - true, не високосный - false).
     //Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.
     public static boolean TypeOfYear (int year) {
-        if (year % 4 == 0 && year % 400 != 0) {
-            return true;
-        } else if (year % 100 != 0) {
-            return false;
-        } else {
-            return false;
-        }
+        return (year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0);
     }
+
 
 
 }
