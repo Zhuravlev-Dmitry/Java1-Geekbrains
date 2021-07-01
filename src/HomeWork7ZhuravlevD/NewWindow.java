@@ -13,7 +13,7 @@ public class NewWindow extends JFrame {
     private int PosX = 300;
     private int PosY = 200;
     private int minSizeMap = 3;
-    private int maxSizeMap = 8;
+    private int maxSizeMap = 3;
     private int minWinSizeMap = 3;
     private JPanel panelUpr;
     private JPanel panelControl;
@@ -138,6 +138,8 @@ public class NewWindow extends JFrame {
         Record("**** Round " + round + "****");
         Record("User Map" + mapSize + "x" + mapSize);
         Record("User WinLength" + winLength);
+        Map.GameStart(mapSize, mapSize, winLength);
+
     }
 
 }
